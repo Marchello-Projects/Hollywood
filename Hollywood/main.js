@@ -1,2 +1,2 @@
-import './reset.scss'
-import './src/pcStyle/style.scss'
+//Import styles
+import './styles'
