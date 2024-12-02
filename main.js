@@ -29,7 +29,7 @@ htmlSliderElements.btnReturn.addEventListener("click", () => {
         } else {
             indexImg = arrayImgs.length - 1
         }
-        htmlSliderElements.img.src = `./Hollywood/src/img/works/${arrayImgs[indexImg]}`
+        htmlSliderElements.img.src = `./src/img/works/${arrayImgs[indexImg]}`
         htmlSliderElements.img.classList.remove('hidden')
     }, 500)
 })
@@ -43,7 +43,7 @@ htmlSliderElements.btnNext.addEventListener("click", () => {
         } else {
             indexImg = 0
         }
-        htmlSliderElements.img.src = `./Hollywood/src/img/works/${arrayImgs[indexImg]}`
+        htmlSliderElements.img.src = `./src/img/works/${arrayImgs[indexImg]}`
         htmlSliderElements.img.classList.remove('hidden')
     }, 500)
 })
@@ -145,8 +145,8 @@ setInterval(() => {
             textInfoIndex2 = 0
         }
 
-        htmlExpertsElements.imgExpert1.src = `./Hollywood/src/img/experts/${arrayImgsTabletExperts1[imgIndexBlock1]}`
-        htmlExpertsElements.imgExpert2.src = `./Hollywood/src/img/experts/${arrayImgsTabletExperts2[imgIndexBlock2]}`
+        htmlExpertsElements.imgExpert1.src = `./src/img/experts/${arrayImgsTabletExperts1[imgIndexBlock1]}`
+        htmlExpertsElements.imgExpert2.src = `./src/img/experts/${arrayImgsTabletExperts2[imgIndexBlock2]}`
         htmlExpertsElements.titleTextExpert1.textContent = `${arrayTitleTextExperts1[textTitleIndex1]}`
         htmlExpertsElements.titleTextExpert2.textContent = `${arrayTitleTextExperts2[textTitleIndex2]}`
         htmlExpertsElements.infoTextExpert1.textContent = `${arrayInfoTextExperts1[textInfoIndex1]}`
