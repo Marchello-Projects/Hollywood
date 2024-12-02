@@ -145,7 +145,7 @@ setInterval(() => {
             textInfoIndex2 = 0
         }
 
-        htmlExpertsElements.imgExpert1.src = `./src/img/experts/${arrayImgsTabletExperts1[imgIndexBlock1]}`
+        htmlExpertsElements.imgExpert1.src = `src/img/experts/${arrayImgsTabletExperts1[imgIndexBlock1]}`
         htmlExpertsElements.imgExpert2.src = `./src/img/experts/${arrayImgsTabletExperts2[imgIndexBlock2]}`
         htmlExpertsElements.titleTextExpert1.textContent = `${arrayTitleTextExperts1[textTitleIndex1]}`
         htmlExpertsElements.titleTextExpert2.textContent = `${arrayTitleTextExperts2[textTitleIndex2]}`
