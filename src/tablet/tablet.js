@@ -5,16 +5,25 @@ const tabletElements = {
     tabletInfoTextExpert: document.querySelector("#tabletInfoTextExpert"),
 }
 
+import tablet1 from './img/experts/tablet1.png';
+import tablet2 from './img/experts/tablet2.png';
+import tablet3 from './img/experts/tablet3.png';
+import tablet4 from './img/experts/tablet4.png';
+import tablet5 from './img/experts/tablet5.png';
+import tablet6 from './img/experts/tablet6.png';
+import tablet7 from './img/experts/tablet7.png';
+import tablet8 from './img/experts/tablet8.png';
+
 const arrayImgsTabletExperts = [
-    'tablet1.png',
-    'tablet2.png',
-    'tablet3.png',
-    'tablet4.png',
-    'tablet5.png',
-    'tablet6.png',
-    'tablet7.png',
-    'tablet8.png',
-]
+    tablet1,
+    tablet2,
+    tablet3,
+    tablet4,
+    tablet5,
+    tablet6,
+    tablet7,
+    tablet8,
+];
 
 const arrayTitleTextTabletExperts = [
     "Твердохліб Андрій Валерійович",
@@ -60,7 +69,7 @@ setInterval(() => {
             indexInfoTextTablet = 0
         }
 
-        tabletElements.tabletImgExpert.src = `./src/tablet/img/experts/${arrayImgsTabletExperts[indexImgTablet]}`
+        tabletElements.tabletImgExpert.src = arrayImgsTabletExperts[indexImgTablet];
         tabletElements.tabletTitleTextExpert.textContent = `${arrayTitleTextTabletExperts[indexTitleTextTablet]}`
         tabletElements.tabletInfoTextExpert.textContent = `${arrayInfoTextTabletExperts[indexInfoTextTablet]}`
 
@@ -74,11 +83,15 @@ setInterval(() => {
 // Slider
 const tabletImg = document.querySelector("#tabletImg")
 
+import img1 from './img/worksTablet/1.png';
+import img2 from './img/worksTablet/2.png';
+import img3 from './img/worksTablet/3.png';
+
 const arrayImgsTablet = [
-    '1.png',
-    '2.png',
-    '3.png',
-]
+    img1,
+    img2,
+    img3,
+];
 
 let indexImgTabletWorks = 0
 
@@ -92,7 +105,7 @@ setInterval(() => {
             indexImgTabletWorks = 0
         }
 
-        tabletImg.src = `./src/img/works/${arrayImgsTablet[indexImgTabletWorks]}`
+        tabletImg.src = arrayImgsTablet[indexImgTabletWorks];
 
         tabletImg.classList.remove('hidden')
     }, 1000)

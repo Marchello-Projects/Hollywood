@@ -5,15 +5,24 @@ const phoneElements = {
     phoneText2: document.querySelector("#phoneText2")
 }
 
+import phone1 from './img/experts/phone1.png'
+import phone2 from './img/experts/phone2.png'
+import phone3 from './img/experts/phone3.png'
+import phone4 from './img/experts/phone4.png'
+import phone5 from './img/experts/phone5.png'
+import phone6 from './img/experts/phone6.png'
+import phone7 from './img/experts/phone7.png'
+import phone8 from './img/experts/phone8.png'
+
 const arrayImgsPhoneExperts = [
-    'phone1.png',
-    'phone2.png',
-    'phone3.png',
-    'phone4.png',
-    'phone5.png',
-    'phone6.png',
-    'phone7.png',
-    'phone8.png',
+    phone1,
+    phone2,
+    phone3,
+    phone4,
+    phone5,
+    phone6,
+    phone7,
+    phone8,
 ]
 
 const arrayTitleTextPhoneExperts = [
@@ -60,7 +69,7 @@ setInterval(() => {
             indexInfoTextPhone = 0
         }
 
-        phoneElements.imgPhone.src = `./src/phone/img/experts/${arrayImgsPhoneExperts[indexImgPhone]}`
+        phoneElements.imgPhone.src = arrayImgsPhoneExperts[indexImgPhone];
         phoneElements.phoneText1.textContent = `${arrayTitleTextPhoneExperts[indexTitleTextPhone]}`
         phoneElements.phoneText2.textContent = `${arrayInfoTextPhoneExperts[indexInfoTextPhone]}`
 
@@ -72,11 +81,15 @@ setInterval(() => {
 
 // Slider
 const phoneImg = document.querySelector("#phoneImg")
+import img1 from './img/works/1.png';
+import img2 from './img/works/2.png';
+import img3 from './img/works/3.png';
+
 const arrayImgsPhone = [
-    '1.png',
-    '2.png',
-    '3.png',
-]
+    img1,
+    img2,
+    img3,
+];
 
 let indexImgPhoneWorks = 0
 
@@ -90,7 +103,7 @@ setInterval(() => {
             indexImgPhoneWorks = 0
         }
 
-        phoneImg.src = `./src/phone/img/works/${arrayImgsPhone[indexImgPhoneWorks]}`
+        phoneImg.src = arrayImgsPhone[indexImgPhoneWorks];
 
         phoneImg.classList.remove('hidden')
     }, 1000)
