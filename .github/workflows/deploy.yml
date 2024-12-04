@@ -15,17 +15,17 @@ jobs:
         run: |
           npm i
           mkdir dist
-          cp -r ./HollywoodFavicon ./dist
-          cp -r ./node_modules ./dist
-          cp -r ./src ./dist
-          cp ./.gitignore ./dist
-          cp ./CNAME ./dist
-          cp ./index.html ./dist
-          cp ./main.js ./dist
-          cp ./index.html ./dist
-          cp ./package-lock.json ./dist
-          cp ./package.json ./dist
-          cp ./reset.scss ./dist
+          mv ./HollywoodFavicon ./dist
+          mv ./node_modules ./dist
+          mv ./src ./dist
+          mv ./.gitignore ./dist
+          mv ./CNAME ./dist
+          mv ./index.html ./dist
+          mv ./main.js ./dist
+          mv ./index.html ./dist
+          mv ./package-lock.json ./dist
+          mv ./package.json ./dist
+          mv ./reset.scss ./dist
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0

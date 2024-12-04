@@ -120,7 +120,7 @@ html {
                 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);           
                 width: 427px;
                 height: 213px;
-                background: url(../img/titleBlock/1.jpg);
+                background: url(./src/img/titleBlock/1.jpg);
                 background-repeat: no-repeat;
                 background-size: cover;
                 z-index: 1;
@@ -132,7 +132,7 @@ html {
                 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);           
                 width: 427px;
                 height: 213px;
-                background: url(../img/titleBlock/2.jpg);
+                background: url(./src/img/titleBlock/2.jpg);
                 background-repeat: no-repeat;
                 background-size: cover;
                 margin-top: 185px;
@@ -146,7 +146,7 @@ html {
                 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);           
                 width: 427px;
                 height: 213px;
-                background: url(../img/titleBlock/3.jpg);
+                background: url(./src/img/titleBlock/3.jpg);
                 background-repeat: no-repeat;
                 background-size: cover;
                 margin-top: 375px;
@@ -159,7 +159,7 @@ html {
 .main {
     &_invitationBlock {
         @include FlexElement(center, center);
-        background: url(../img/invitationBlock.jpg);
+        background: url(./src/img/invitationBlock.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
