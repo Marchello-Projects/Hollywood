@@ -14,7 +14,17 @@ jobs:
       - name: Create deploy folder 🔧
         run: |
           mkdir dist
-          cp ./index.html dist/index.html
+          cp -r ./HollywoodFavicon ./dist
+          cp -r ./node_modules ./dist
+          cp -r ./src ./dist
+          cp ./.gitignore ./dist
+          cp ./CNAME ./dist
+          cp ./index.html ./dist
+          cp ./main.js ./dist
+          cp ./index.html ./dist
+          cp ./package-lock.json ./dist
+          cp ./package.json ./dist
+          cp ./reset.scss ./dist
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
