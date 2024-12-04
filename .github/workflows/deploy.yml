@@ -25,7 +25,12 @@ jobs:
           mv ./index.html ./dist
           mv ./package-lock.json ./dist
           mv ./package.json ./dist
+          mv ./reset.css ./dist
+          mv ./reset.css.map ./dist
           mv ./reset.scss ./dist
+          mv ./style.css ./dist
+          mv ./style.css.map ./dist
+          mv ./style.scss ./dist
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.0
