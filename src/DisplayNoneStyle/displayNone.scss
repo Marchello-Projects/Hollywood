@@ -1,0 +1,61 @@
+.tabletHeader {
+    &_navigationBar {
+        display: none;
+    }
+    &_headerBlock {
+        display: none;
+    }
+}
+.tabletMain {
+    &_invitationBlock {
+        display: none;
+    }
+    &_expertsBlock {
+        display: none;
+    }
+    &_worksBlock {
+        display: none;
+    }
+    &_sevicesBlock {
+        display: none;
+    }
+    &_mapsBlock {
+        display: none;
+    }
+}
+.tabletFooter {
+    &_forblock {
+        display: none;
+    }
+}
+
+.phoneHeader {
+    &_navigationBlock {
+        display: none;
+    }
+    &_headerBlock {
+        display: none;
+    }    
+}
+.phoneMain {
+    &_invitationBlock {
+        display: none;
+    }
+    &_expertsBlock {
+        display: none;
+    }
+    &_worksBlock {
+        display: none;
+    }
+    &_block4 {
+        display: none;
+    }
+    &_mapsBlock {
+        display: none;
+    }
+}
+.phoneFooter {
+    &_forblock {
+        display: none;
+    }
+}

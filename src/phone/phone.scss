@@ -1,0 +1,590 @@
+@mixin FlexElement($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin ForBlocks ($justify) {
+    display: flex;
+    justify-content: $justify;
+}
+
+@media screen and (max-width:431px) and (min-width:320px) {
+    .header {
+        display: none;
+    }
+    .main {
+        display: none;
+    }
+    .footer {
+        display: none;
+    }
+    .phoneHeader {
+        display: block;
+        width: 100%;
+        height: 715px;
+        background: linear-gradient(180.00deg, rgb(0, 0, 0) 6.494%,rgba(0, 0, 0, 0) 93.59%);
+        &_navigationBlock {
+            @include FlexElement(space-between, center);
+            width: 100%;
+            height: 50px;
+            position: fixed;
+            z-index: 3;
+            margin: 0 auto;
+            backdrop-filter: blur(4px);
+            background: rgba(0, 0, 0, 0.63);
+            &_logo {
+                display: flex;
+                margin-left: 5px;
+                &_img1 {
+                    width: 25px;
+                    height: 36px;          
+                }
+                &_img2 {
+                    width: 156px;
+                    height: 25px;    
+                    margin-top: 6px;
+                    margin-left: 5px;
+                }
+            }
+            &_link {
+                text-decoration: none;
+                &_btn {
+                    width: 95px;
+                    height: 35px;
+                    text-align: center;
+                    color: #fff;
+                    font-family: "Montserrat";
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal; 
+                    text-decoration: none;
+                    border: 1px solid rgb(255, 255, 255);
+                    border-radius: 5px;
+                    background: none;
+                    cursor: pointer;
+                    transition-duration: 0.6s; 
+                    margin-right: 5px;    
+                    &:hover {
+                        transition-duration: 0.6s;     
+                        color: #000;
+                        background: rgb(255, 255, 255);        
+                    }            
+                }
+            }
+        }
+        &_headerBlock {
+            display: block;
+            &_fortext {
+                @include ForBlocks(center);
+                &_text {
+                    text-align: center;
+                    color: #fff;
+                    font-family: "Montserrat";
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;    
+                    text-shadow: 1px 1px 2px #000;         
+                    width: 329px;
+                    height: 144px;
+                    margin-top: 70px;
+                }
+            }
+            &_forimgblock {
+                @include ForBlocks(center);
+                &_imgblock {
+                    margin-top: 30px;
+                    width: 315px;
+                    height: 412px;
+                    &_imgb1 {
+                        position: absolute;
+                        border: 2px solid rgb(255, 255, 255);
+                        border-radius: 5px;
+                        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);           
+                        width: 315px;
+                        height: 157px;
+                        background: url(../../src/img/titleBlock/1.jpg);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        z-index: 1;
+                    }
+                    &_imgb2 {
+                        position: absolute;
+                        border: 2px solid rgb(255, 255, 255);
+                        border-radius: 5px;
+                        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);           
+                        width: 315px;
+                        height: 157px;
+                        background: url(../../src/img/titleBlock/2.jpg);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        margin-top: 140px;
+                        z-index: 2;
+                    }
+                    &_imgb3 {
+                        position: absolute;
+                        border: 2px solid rgb(255, 255, 255);
+                        border-radius: 5px;
+                        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);           
+                        width: 315px;
+                        height: 157px;
+                        background: url(../../src/img/titleBlock/3.jpg);
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        margin-top: 280px;
+                        z-index: 2;
+                    }
+                }
+            }
+        }
+    } 
+    .phoneMain {
+        &_invitationBlock {
+            display: block;
+            &_fortext {
+                @include FlexElement(center, center);
+                width: 100%;
+                height: 428px;
+                background: url(./img/invitationBlock.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;   
+                &_blur {
+                    filter: blur(5px);
+                    background: inherit;
+                    width: 100%;
+                    height: 428px;
+                }
+                &_text {
+                    position: absolute;
+                    color: #fff;
+                    font-family: "Montserrat";
+                    width: 320px;
+                    height: 166px;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal; 
+                    text-align: center;
+                    text-shadow: 1px 1px 2px #000;
+                }        
+            }
+        }
+        &_expertsBlock {
+            display: block;
+            height: 600px;
+            &_fortext {
+                @include ForBlocks(center);
+                &_text {
+                    margin-top: 29px;
+                    color: #000000;
+                    font-family: "Montserrat";
+                    width: 317px;
+                    height: 219px;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal; 
+                    text-align: center;                
+                }
+            }
+            &_forimg {
+                @include ForBlocks(center);
+                &_img {
+                    margin-top: 10px;
+                    box-sizing: border-box;
+                    border: 1px solid rgb(209, 209, 209);
+                    border-radius: 5px;
+                    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                    opacity: 1; 
+                    transition: opacity 1s ease-in-out;   
+                }
+            }
+            &_forp1 {
+                @include ForBlocks(center); 
+                &_p {
+                    color: #000;
+                    text-align: center;
+                    font-family: Montserrat;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: bold;
+                    line-height: normal;
+                    margin-top: 20px; 
+                    opacity: 1; 
+                    transition: opacity 1s ease-in-out;
+                }
+            }
+            &_forp2 {
+                @include ForBlocks(center); 
+                &_p {
+                    font-family: "Montserrat";
+                    font-size: 16px;
+                    font-style: italic;
+                    font-weight: 600;
+                    line-height: normal; 
+                    text-align: center; 
+                    margin-top: 5px; 
+                    color: #000000;     
+                    opacity: 1; 
+                    transition: opacity 1s ease-in-out;
+                }
+            }
+        }
+        &_worksBlock {
+            display: block;
+            &_bl {
+                margin-top: 15px;
+                width: 100%;
+                height: 470px;
+                background: rgb(35, 35, 35);
+                &_fortext {
+                    @include ForBlocks(center);       
+                    &_text {
+                        margin-top: 33px;
+                        color: #ffffff;
+                        font-family: "Montserrat";
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;     
+                    }       
+                }
+                &_forimg {
+                    @include ForBlocks(center); 
+                    &_img {
+                        width: 100%;
+                        height: 370px;
+                        margin-top: 20px;
+                        opacity: 1; 
+                        transition: opacity 1s ease-in-out;
+                    }
+                }
+            }
+        }
+        &_block4 {
+            display: block;
+            &_bl {
+                width: 100%;
+                height: 460px;
+                &_fortext {
+                    @include ForBlocks(center);       
+                    &_text {
+                        margin-top: 50px;
+                        color: #000000;
+                        font-family: "Montserrat";
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;          
+                    } 
+                }
+                &_forslider3 {
+                    @include ForBlocks(center);    
+                    &_block {
+                        width: 100%;    
+                        opacity: 1; 
+                        transition: opacity 1s ease-in-out; 
+                        &_fortxt1 {
+                            @include ForBlocks(center);    
+                            margin-top: 20px;
+                            column-gap: 5px;
+                            &_text {
+                                font-family: "Montserrat";
+                                font-size: 36px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: normal; 
+                                text-align: center; 
+                                color: #000000;   
+                                margin-top: 4px;
+                                opacity: 1; 
+                                transition: opacity 1s ease-in-out;
+                            }
+                        }
+                        &_fortxt {
+                            @include ForBlocks(center);    
+                            margin-top: 45px;
+                            column-gap: 5px;
+                            &_text {
+                                font-family: "Montserrat";
+                                font-size: 36px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: normal; 
+                                text-align: center; 
+                                color: #000000;   
+                                margin-top: 5px;
+                            }
+                        }
+                        &_fortxt5 {
+                            @include ForBlocks(center);    
+                            margin-top: 75px;
+                            column-gap: 5px;
+                            &_text5 {
+                                font-family: "Montserrat";
+                                font-size: 36px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: normal; 
+                                text-align: center; 
+                                color: #000000;   
+                                margin-top: 15px;
+                            }
+                        }
+                        &_fortxt6 {
+                            @include ForBlocks(center);    
+                            margin-top: 45px;
+                            column-gap: 5px;
+                            &_text6 {
+                                font-family: "Montserrat";
+                                font-size: 36px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: normal; 
+                                text-align: center; 
+                                color: #000000;   
+                                margin-top: 15px;
+                            }
+                        }
+                        &_fortxt7 {
+                            @include ForBlocks(center);    
+                            margin-top: 65px;
+                            column-gap: 5px;
+                            &_text7 {
+                                font-family: "Montserrat";
+                                font-size: 30px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: normal; 
+                                text-align: center; 
+                                color: #000000;   
+                                margin-top: 15px;
+                            }
+                        }
+                        &_fortxt2 {
+                            @include ForBlocks(center);    
+                            margin-top: 25px;
+                            column-gap: 5px;
+                            &_text {
+                                font-family: "Montserrat";
+                                font-size: 32px;
+                                font-style: italic;
+                                font-weight: 500;
+                                line-height: normal; 
+                                text-align: center; 
+                                color: #000000;   
+                                margin-top: 4px;
+                            }
+                            &_text2 {
+                                font-family: "Montserrat";
+                                font-size: 32px;
+                                font-style: italic;
+                                font-weight: 500;
+                                line-height: normal; 
+                                text-align: center; 
+                                color: #000000;   
+                            }
+                        }
+                        &_fortxt3 {
+                            @include ForBlocks(center);    
+                            margin-top: 25px;
+                            column-gap: 5px;
+                            &_text {
+                                font-family: "Montserrat";
+                                font-size: 32px;
+                                font-style: normal;
+                                font-weight: 800;
+                                line-height: normal; 
+                                text-align: center; 
+                                color: #000000;   
+                                margin-top: 4px;
+                            }
+                            &_text2 {
+                                font-family: "Montserrat";
+                                font-size: 32px;
+                                font-style: normal;
+                                font-weight: 800;
+                                line-height: normal; 
+                                text-align: center; 
+                                color: #000000;  
+                            }
+                        }
+                    }  
+                }
+            }
+        }
+        &_mapsBlock {
+            display: block;
+            &_bl {
+                margin-top: 10px;
+                width: 100%;
+                height: 866px;
+                &_forp1 {
+                    @include ForBlocks(center);   
+                    &_p  {
+                        color: #000000;   
+                        font-family: "Montserrat";
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;    
+                    }
+                }
+                &_forp2 {
+                    @include ForBlocks(center);    
+                    column-gap: 2px;
+                    margin-top: 15px;
+                    &_p {
+                        color: #000;
+                        font-family: Montserrat;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                        text-align: center;         
+                    }
+                    &_p2 {
+                        font-family: "Montserrat";
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal; 
+                        text-align: center; 
+                        color: #39248B;     
+                        text-decoration: none;    
+                    }
+                }
+                &_iframe1 {
+                    width: 100%;
+                    height: 350px;
+                    margin-top: 15px;
+                }  
+                &_forp3 {
+                    @include ForBlocks(center);    
+                    margin-top: 15px;
+                    &_p {
+                        color: #000;
+                        font-family: Montserrat;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;      
+                    }
+                    &_p2 {
+                        font-family: "Montserrat";
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal; 
+                        text-align: center; 
+                        color: #39248B;     
+                        text-decoration: none;    
+                    }
+                }
+                &_iframe2 {
+                    width: 100%;
+                    height: 350px;
+                    margin-top: 15px;
+                } 
+            }
+        }
+    }
+    .phoneFooter {
+        &_forblock {
+            display: block;
+            &_block {
+                @include FlexElement(center, center);
+                width: 100%;
+                height: 248px;
+                background: rgb(35, 35, 35);
+                &_bl1 {
+                    width: 220px;
+                    height: 180px;
+                    &_logo {
+                        display: flex;
+                        column-gap: 5px;
+                        &_img1 {
+                            width: 26px;
+                            height: 36px;
+                        }
+                        &_img2 {
+                            width: 157px;
+                            height: 25px;
+                            margin-top: 5px;
+                        }
+                    }
+                    &_text1 {
+                        font-family: "Montserrat";
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal; 
+                        color: #fff;     
+                        margin-top: 16px;     
+                    }
+                    &_foraddress1 {
+                        &_address1 {
+                            font-family: "Montserrat";
+                            font-size: 13px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: normal; 
+                            color: #fff;     
+                            margin-top: 10px; 
+                            &_a {
+                                font-family: "Montserrat";
+                                font-size: 13px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: normal; 
+                                text-align: center; 
+                                color: #6a51cd;     
+                                text-decoration: none;        
+                            }           
+                        }
+                    }
+                    &_foraddress2 {
+                        &_address2 {
+                            font-family: "Montserrat";
+                            font-size: 13px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: normal; 
+                            color: #fff;     
+                            margin-top: 10px;
+                            &_a {
+                                font-family: "Montserrat";
+                                font-size: 13px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: normal; 
+                                text-align: center; 
+                                color: #6a51cd;     
+                                text-decoration: none;        
+                            }            
+                        }
+                    }
+                }
+                &_bl2 {
+                    width: 424px;
+                    height: 173px;
+                    &_text {
+                        font-family: "Montserrat";
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal; 
+                        color: #fff;         
+                        text-align: center;      
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hidden {
+    opacity: 0; 
+}

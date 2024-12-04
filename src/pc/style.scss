@@ -1,0 +1,942 @@
+@mixin FlexElement($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+  
+@mixin ForBlocks ($justify) {
+    display: flex;
+    justify-content: $justify;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.header {
+    width: 100%;
+    height: 837px;
+    background: linear-gradient(180.00deg, rgb(0, 0, 0) 6.494%,rgba(0, 0, 0, 0) 93.59%);
+    &_navigationBar {
+        @include FlexElement(space-between, center);
+        width: 100%;
+        height: 46px;
+        position: fixed;
+        z-index: 3;
+        margin: 0 auto;
+        backdrop-filter: blur(4px);
+        background: rgba(0, 0, 0, 0.63);
+        &_logo {
+            display: flex;
+            margin-left: 5px;
+            &_img1 {
+                width: 26px;
+                height: 36px;           
+            }
+            &_img2 {
+                width: 157px;
+                height: 26px;       
+                margin-top: 5px;
+                margin-left: 5px;
+            }
+        }
+        &_navigationElements {
+            width: 650px;
+            height: 17px;
+            &_ul {
+                @include FlexElement(space-between, center);
+                &_li {
+                    list-style: none;
+                    &_a {
+                        color: #fff;
+                        font-family: "Montserrat";
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal; 
+                        text-decoration: none;
+                        transition-duration: 0.6s;
+                        &:hover {
+                            transition-duration: 0.6s;      
+                            font-weight: 900;
+                        }
+                    }
+                }            
+            }
+        }
+        &_link {
+            text-decoration: none;
+            &_btnRegistration {
+                width: 267px;
+                height: 35px;
+                text-align: center;
+                color: #fff;
+                font-family: "Montserrat";
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal; 
+                text-decoration: none;
+                border: 1px solid rgb(255, 255, 255);
+                border-radius: 5px;
+                background: none;
+                cursor: pointer;
+                transition-duration: 0.6s; 
+                margin-right: 5px;    
+                &:hover {
+                    transition-duration: 0.6s;     
+                    color: #000;
+                    background: rgb(255, 255, 255);     
+                }
+            }
+        }
+    }
+    &_titleBlock {
+        @include FlexElement(center, center);
+        width: 100%;
+        height: 640px;
+        column-gap: 50px;
+        &_text {
+            margin-top: 300px;
+            width: 530px;
+            height: 229px;       
+            color: #fff;
+            font-family: "Montserrat";
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal; 
+            text-align: center;
+            text-shadow: 1px 1px 2px #000;
+        }
+        &_imgblock {
+            margin-top: 250px;
+            width: 720px;
+            height: 590px;
+            &_imgb1 {
+                position: absolute;
+                border: 2px solid rgb(255, 255, 255);
+                border-radius: 5px;
+                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);           
+                width: 427px;
+                height: 213px;
+                background: url(../img/titleBlock/1.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                z-index: 1;
+            }
+            &_imgb2 {
+                position: absolute;
+                border: 2px solid rgb(255, 255, 255);
+                border-radius: 5px;
+                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);           
+                width: 427px;
+                height: 213px;
+                background: url(../img/titleBlock/2.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin-top: 185px;
+                margin-left: 140px;
+                z-index: 2;
+            }
+            &_imgb3 {
+                position: absolute;
+                border: 2px solid rgb(255, 255, 255);
+                border-radius: 5px;
+                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);           
+                width: 427px;
+                height: 213px;
+                background: url(../img/titleBlock/3.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin-top: 375px;
+                margin-left: 290px;
+                z-index: 2;
+            }
+        }
+    }
+}
+.main {
+    &_invitationBlock {
+        @include FlexElement(center, center);
+        background: url(../img/invitationBlock.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 750px;
+        &_blurBlock {
+            filter: blur(5px);
+            background: inherit;
+            width: 100%;
+            height: 750px;
+        }
+        &_titleText {
+            position: absolute;
+            width: 1212px;
+            height: 194px;
+            color: #fff;
+            font-family: "Montserrat";
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal; 
+            text-align: center;
+            text-shadow: 1px 1px 2px #000;
+        }
+    }
+    &_expertsBlock {
+        width: 100%;
+        height: 706px;
+        &_titleTextBlock {
+            @include ForBlocks(center);
+            &_titleText {
+                margin-top: 60px;
+                width: 1017px;
+                height: 159px;
+                color: #000;
+                text-align: center;
+                font-family: Montserrat;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;         
+            }
+        }
+        &_bioFlex {
+            @include ForBlocks(center);
+            &_bioBlock {
+                @include FlexElement(center, center);
+                width: 853px;
+                height: 434px;
+                margin-top: 25px;
+                column-gap: 47px;
+                &_bio1 {
+                    width: 400px;
+                    height: 434px;
+                    &_expert {
+                        border-radius: 5px;
+                        border: 1px solid #D1D1D1;
+                        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                        opacity: 1; 
+                        transition: opacity 1s ease-in-out;
+                    }
+                    &_titleText {
+                        color: #000;
+                        text-align: center;
+                        font-family: Montserrat;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: bold;
+                        line-height: normal;
+                        margin-top: 15px;
+                        opacity: 1; 
+                        transition: opacity 1s ease-in-out;
+                    }
+                    &_infoText {
+                        color: #000;
+                        text-align: center;
+                        font-family: Montserrat;
+                        font-size: 20px;
+                        font-style: italic;
+                        font-weight: 600;
+                        line-height: normal;
+                        margin-top: 5px;
+                        opacity: 1; 
+                        transition: opacity 1s ease-in-out;
+                    }
+                }
+                &_bio2 {
+                    width: 400px;
+                    height: 434px;
+                    &_expert {
+                        border-radius: 5px;
+                        border: 1px solid #D1D1D1;
+                        background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+                        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                        opacity: 1; 
+                        transition: opacity 1s ease-in-out;
+                    }
+                    &_titleText {
+                        color: #000;
+                        text-align: center;
+                        font-family: Montserrat;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: bold;
+                        line-height: normal;
+                        margin-top: 15px;
+                        opacity: 1; 
+                        transition: opacity 1s ease-in-out;
+                    }
+                    &_infoText {
+                        color: #000;
+                        text-align: center;
+                        font-family: Montserrat;
+                        font-size: 20px;
+                        font-style: italic;
+                        font-weight: 600;
+                        line-height: normal;
+                        margin-top: 5px;
+                        opacity: 1; 
+                        transition: opacity 1s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+    &_worksBlock {
+        width: 100%;
+        height: 512px;
+        background: #232323; 
+        &_titleTextCenter {
+            @include ForBlocks(Center);
+            &_titleText {
+                color: #FFF;
+                font-family: Montserrat;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                margin-top: 40px;
+            }
+        }
+        &_sliderCenter {
+            @include ForBlocks(center);    
+            column-gap: 45px;
+            margin-top: 25px;
+            &_btnReturn {
+                background: none;
+                border: none;
+                cursor: pointer;
+            } 
+            &_img {  
+                border-radius: 10px; 
+                box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.53);  
+                opacity: 1; 
+                transition: opacity 1s ease-in-out;
+            }
+            &_btnNext {
+                background: none;
+                border: none;
+                cursor: pointer;         
+            }
+        }    
+    }
+    &_servicesBlock {
+        width: 100%;
+        height: 490px;
+        background: linear-gradient(180deg, #232323 0%, #FFF 100%);
+        &_titleTextCenter {
+            @include ForBlocks(center);
+            &_titleText {
+                color: #ffffff;
+                font-family: Montserrat;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                margin-top: 25px;
+            }
+        }
+        &_scrollBlockCenter {
+            @include ForBlocks(center);
+            &_scrollBlock {
+                width: 425px;
+                height: 387px;
+                margin-top: 20px;
+                overflow-y: hidden;
+                overflow-x: scroll;
+                white-space: nowrap;
+                &::-webkit-scrollbar {
+                    height: 8px; 
+                }
+                &::-webkit-scrollbar-thumb {
+                    background-color: #c9c9c9;
+                    border-radius: 4px;
+                }
+                &_element1 {
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 425px;
+                    height: 375px;
+                    border-radius: 15px;
+                    background: #ffffff;
+                    &_titleCenter {
+                        @include ForBlocks(center);
+                        &_titleBlock {
+                            display: flex;
+                            column-gap: 10px;
+                            margin-top: 60px;
+                            &_titleText {
+                                color: #000;
+                                font-family: Montserrat;
+                                font-size: 36px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: normal;   
+                            }
+                        }
+                    }
+                    &_infoCenter {
+                        @include ForBlocks(center);
+                        &_infoText {
+                            white-space: normal;
+                            text-align: center;
+                            color: #000;
+                            font-family: Montserrat;
+                            font-size: 32px;
+                            font-style: italic;
+                            font-weight: 500;
+                            line-height: normal; 
+                            margin-top: 20px;                
+                            text-overflow: ellipsis; 
+                        }
+                    }
+                    &_priceCenter {
+                        @include ForBlocks(center);
+                        &_priceText {
+                            color: #000;
+                            text-align: center;
+                            font-family: Montserrat;
+                            font-size: 32px;
+                            font-style: normal;
+                            font-weight: 800;
+                            line-height: normal;   
+                            margin-top: 35px;            
+                        }
+                    }
+                }
+                &_element2 {
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 425px;
+                    height: 375px;
+                    border-radius: 15px;
+                    background: #ffffff;
+                    &_titleCenter {
+                        @include ForBlocks(center);
+                        &_titleBlock {
+                            display: flex;
+                            column-gap: 10px;
+                            margin-top: 60px;
+                            &_titleText {
+                                color: #000;
+                                font-family: Montserrat;
+                                font-size: 36px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: normal; 
+                                margin-top: 10px  
+                            }
+                        }
+                    }
+                    &_infoCenter {
+                        @include ForBlocks(center);
+                        &_infoText {
+                            white-space: normal;
+                            text-align: center;
+                            color: #000;
+                            font-family: Montserrat;
+                            font-size: 32px;
+                            font-style: italic;
+                            font-weight: 500;
+                            line-height: normal; 
+                            margin-top: 20px;                
+                            text-overflow: ellipsis; 
+                        }
+                    }
+                    &_priceCenter {
+                        @include ForBlocks(center);
+                        &_priceText {
+                            color: #000;
+                            text-align: center;
+                            font-family: Montserrat;
+                            font-size: 32px;
+                            font-style: normal;
+                            font-weight: 800;
+                            line-height: normal;   
+                            margin-top: 35px;            
+                        }
+                    }
+                }
+                &_element3 {
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 425px;
+                    height: 375px;
+                    border-radius: 15px;
+                    background: #ffffff;
+                    &_titleCenter {
+                        @include ForBlocks(center);
+                        &_titleBlock {
+                            display: flex;
+                            column-gap: 10px;
+                            margin-top: 60px;
+                            &_titleText {
+                                color: #000;
+                                font-family: Montserrat;
+                                font-size: 36px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: normal; 
+                                margin-top: 15px;  
+                            }
+                        }
+                    }
+                    &_infoCenter {
+                        @include ForBlocks(center);
+                        &_infoText {
+                            white-space: normal;
+                            text-align: center;
+                            color: #000;
+                            font-family: Montserrat;
+                            font-size: 30px;
+                            font-style: italic;
+                            font-weight: 500;
+                            line-height: normal; 
+                            margin-top: 20px;                
+                            text-overflow: ellipsis; 
+                        }
+                    }
+                    &_priceCenter {
+                        @include ForBlocks(center);
+                        &_priceText {
+                            color: #000;
+                            text-align: center;
+                            font-family: Montserrat;
+                            font-size: 32px;
+                            font-style: normal;
+                            font-weight: 800;
+                            line-height: normal;   
+                            margin-top: 35px;            
+                        }
+                    }
+                }
+                &_element4 {
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 425px;
+                    height: 375px;
+                    border-radius: 15px;
+                    background: #ffffff;
+                    &_titleCenter {
+                        @include ForBlocks(center);
+                        &_titleBlock {
+                            display: flex;
+                            column-gap: 10px;
+                            margin-top: 60px;
+                            &_titleText {
+                                color: #000;
+                                font-family: Montserrat;
+                                font-size: 36px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: normal;  
+                                margin-top: 8px; 
+                            }
+                        }
+                    }
+                    &_infoCenter {
+                        @include ForBlocks(center);
+                        &_infoText {
+                            white-space: normal;
+                            text-align: center;
+                            color: #000;
+                            font-family: Montserrat;
+                            font-size: 28px;
+                            font-style: italic;
+                            font-weight: 500;
+                            line-height: normal; 
+                            margin-top: 20px;                
+                            text-overflow: ellipsis; 
+                        }
+                    }
+                    &_priceCenter {
+                        @include ForBlocks(center);
+                        &_priceText {
+                            color: #000;
+                            text-align: center;
+                            font-family: Montserrat;
+                            font-size: 32px;
+                            font-style: normal;
+                            font-weight: 800;
+                            line-height: normal;   
+                            margin-top: 35px;            
+                        }
+                    }
+                }
+                &_element5 {
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 425px;
+                    height: 375px;
+                    border-radius: 15px;
+                    background: #ffffff;
+                    &_titleCenter {
+                        @include ForBlocks(center);
+                        &_titleBlock {
+                            display: flex;
+                            column-gap: 10px;
+                            margin-top: 60px;
+                            &_titleText {
+                                color: #000;
+                                font-family: Montserrat;
+                                font-size: 36px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: normal; 
+                                margin-top: 11px;  
+                            }
+                        }
+                    }
+                    &_infoCenter {
+                        @include ForBlocks(center);
+                        &_infoText {
+                            white-space: normal;
+                            text-align: center;
+                            color: #000;
+                            font-family: Montserrat;
+                            font-size: 32px;
+                            font-style: italic;
+                            font-weight: 500;
+                            line-height: normal; 
+                            margin-top: 20px;                
+                            text-overflow: ellipsis; 
+                        }
+                    }
+                    &_priceCenter {
+                        @include ForBlocks(center);
+                        &_priceText {
+                            color: #000;
+                            text-align: center;
+                            font-family: Montserrat;
+                            font-size: 32px;
+                            font-style: normal;
+                            font-weight: 800;
+                            line-height: normal;   
+                            margin-top: 35px;            
+                        }
+                    }
+                }
+                &_element6 {
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 425px;
+                    height: 375px;
+                    border-radius: 15px;
+                    background: #ffffff;
+                    &_titleCenter {
+                        @include ForBlocks(center);
+                        &_titleBlock {
+                            display: flex;
+                            column-gap: 10px;
+                            margin-top: 60px;
+                            &_titleText {
+                                color: #000;
+                                font-family: Montserrat;
+                                font-size: 36px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: normal;  
+                                margin-top: 17px; 
+                            }
+                        }
+                    }
+                    &_infoCenter {
+                        @include ForBlocks(center);
+                        &_infoText {
+                            white-space: normal;
+                            text-align: center;
+                            color: #000;
+                            font-family: Montserrat;
+                            font-size: 32px;
+                            font-style: italic;
+                            font-weight: 500;
+                            line-height: normal; 
+                            margin-top: 20px;                
+                            text-overflow: ellipsis; 
+                        }
+                    }
+                    &_priceCenter {
+                        @include ForBlocks(center);
+                        &_priceText {
+                            color: #000;
+                            text-align: center;
+                            font-family: Montserrat;
+                            font-size: 32px;
+                            font-style: normal;
+                            font-weight: 800;
+                            line-height: normal;   
+                            margin-top: 35px;            
+                        }
+                    }
+                }
+                &_element7 {
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 425px;
+                    height: 375px;
+                    border-radius: 15px;
+                    background: #ffffff;
+                    &_titleCenter {
+                        @include ForBlocks(center);
+                        &_titleBlock {
+                            display: flex;
+                            column-gap: 10px;
+                            margin-top: 60px;
+                            &_titleText {
+                                color: #000;
+                                font-family: Montserrat;
+                                font-size: 36px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: normal;   
+                                margin-top: 5px;
+                            }
+                        }
+                    }
+                    &_infoCenter {
+                        @include ForBlocks(center);
+                        &_infoText {
+                            white-space: normal;
+                            text-align: center;
+                            color: #000;
+                            font-family: Montserrat;
+                            font-size: 32px;
+                            font-style: italic;
+                            font-weight: 500;
+                            line-height: normal; 
+                            margin-top: 20px;                
+                            text-overflow: ellipsis; 
+                        }
+                    }
+                    &_priceCenter {
+                        @include ForBlocks(center);
+                        &_priceText {
+                            color: #000;
+                            text-align: center;
+                            font-family: Montserrat;
+                            font-size: 32px;
+                            font-style: normal;
+                            font-weight: 800;
+                            line-height: normal;   
+                            margin-top: 35px;            
+                        }
+                    }
+                }
+                &_element8 {
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 425px;
+                    height: 375px;
+                    border-radius: 15px;
+                    background: #ffffff;
+                    &_titleCenter {
+                        @include ForBlocks(center);
+                        &_titleBlock {
+                            display: flex;
+                            column-gap: 10px;
+                            margin-top: 60px;
+                            &_titleText {
+                                color: #000;
+                                font-family: Montserrat;
+                                font-size: 30px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: normal;   
+                                margin-top: 14px;
+                            }
+                        }
+                    }
+                    &_infoCenter {
+                        @include ForBlocks(center);
+                        &_infoText {
+                            white-space: normal;
+                            text-align: center;
+                            color: #000;
+                            font-family: Montserrat;
+                            font-size: 32px;
+                            font-style: italic;
+                            font-weight: 500;
+                            line-height: normal; 
+                            margin-top: 20px;                
+                            text-overflow: ellipsis; 
+                        }
+                    }
+                    &_priceCenter {
+                        @include ForBlocks(center);
+                        &_priceText {
+                            color: #000;
+                            text-align: center;
+                            font-family: Montserrat;
+                            font-size: 32px;
+                            font-style: normal;
+                            font-weight: 800;
+                            line-height: normal;   
+                            margin-top: 35px;            
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &_mapsBlock {
+        width: 100%;
+        height: 1460px;
+        &_titleTextCenter {
+            @include ForBlocks(center);
+            &_titleText {
+                color: #000;
+                font-family: Montserrat;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;           
+            }
+        }
+        &_titleTextCenter2 {
+            @include ForBlocks(center);
+            &_titleText {
+                color: #000;
+                font-family: Montserrat;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;  
+                margin-top: 15px;    
+                &_numberPhone {
+                    color: #39248B;
+                    font-family: Montserrat;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    text-decoration: none;
+                }  
+            }
+        }
+        &_map1 {
+            width: 100%;
+            height: 661px;
+            margin-top: 10px;
+        }
+        &_titleTextCenter3 {
+            @include ForBlocks(center);
+            &_titleText {
+                color: #000;
+                font-family: Montserrat;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;  
+                margin-top: 15px;    
+                &_numberPhone {
+                    color: #39248B;
+                    font-family: Montserrat;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    text-decoration: none;
+                }  
+            }
+        }
+        &_map2 {
+            width: 100%;
+            height: 661px;
+            margin-top: 10px;
+        }
+    }
+}
+.footer {
+    column-gap: 35px;
+    @include FlexElement(center, center);
+    width: 100%;
+    height: 377px;
+    background: #232323;
+    &_blockLogo {
+        width: 220px;
+        height: 180px;
+        &_logo {
+            display: flex;
+            column-gap: 5px;
+            &_img1 {
+                width: 26px;
+                height: 36px;
+            }
+            &_img2 {
+                width: 157px;
+                height: 25px;
+                margin-top: 5px;
+            }
+        }
+        &_textContact {
+            font-family: "Montserrat";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal; 
+            color: #fff;     
+            margin-top: 16px;     
+        }
+        &_addressCenter {
+            &_address {
+                font-family: "Montserrat";
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal; 
+                color: #fff;     
+                margin-top: 10px;            
+            }
+            &_addressLink {
+                font-family: "Montserrat";
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal; 
+                text-align: center; 
+                color: #6a51cd;     
+                text-decoration: none;        
+            }
+        }
+        &_addressCenter2 {
+            &_address {
+                font-family: "Montserrat";
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal; 
+                color: #fff;     
+                margin-top: 10px;            
+            }
+            &_addressLink {
+                font-family: "Montserrat";
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal; 
+                text-align: center; 
+                color: #6a51cd;     
+                text-decoration: none;        
+            }
+        }
+    }
+    &_blockText {
+        width: 812px;
+        height: 126px;
+        &_text {
+            font-family: "Montserrat";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal; 
+            color: #fff;   
+            text-align: center;        
+        }
+    }
+}
+
+.hidden {
+    opacity: 0; 
+}
