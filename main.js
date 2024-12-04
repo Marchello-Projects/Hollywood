@@ -1,11 +1,14 @@
 // Import styles
-import './styles'
+import './reset.scss'
+import './src/pc/style.scss'
+import './src/DisplayNoneStyle/displayNone.js'
+import './src/tablet/tabletStyle.js'
+import './src/phone/phoneStyle.js'
 
 // Import js
 import './src/tablet/tablet'
 import './src/phone/phone'
 
-// Импорт изображений для слайдера
 import img1 from './src/img/works/1.png';
 import img2 from './src/img/works/2.png';
 import img3 from './src/img/works/3.png';
