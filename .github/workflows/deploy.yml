@@ -13,6 +13,7 @@ jobs:
 
       - name: Create deploy folder 🔧
         run: |
+          npm i
           mkdir dist
           cp -r ./HollywoodFavicon ./dist
           cp -r ./node_modules ./dist
